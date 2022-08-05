@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>products</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        ${style}
+    </style>
 </head>
 <body>
-<h3>Hi ${recipientName}, you have a new message!</h3>
+<h1 style="text-align:center"><strong> Hi ${name}</strong> , you have a new message!</h1>
+<section style="margin: auto;text-align:center;color:white;height: 400px;width:600px;background: url('$backgroundImage') center/cover no-repeat">
+##    <p>
+##        From - ${user.firstName} ${user.lastName} / ${user.email}
+##    </p>
+##    <h1 style="padding-top: 50px;font-size: 36px">
+##        ${message.body}
+##    </h1>
+##    <br>
+</section>
 <p>
-    From - ${user.firstName} ${user.lastName} / ${user.email}
-</p>
-<br>
-<p>
-    Le ${date}
+    Le ${now} ${body}
 </p>
 </body>
 </html>
