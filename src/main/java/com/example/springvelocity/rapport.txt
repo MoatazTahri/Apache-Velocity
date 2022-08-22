@@ -7,7 +7,7 @@ La première semaine :
 
 Nous avons créé un email simple en utilisant Java Mail Sender et Apache velocity Template, et l'envoyer dans le courrier avec
 Gmail smtp.
-Aprés on a créé une nouvelle classe pour simplifier l'initialisation d'un email et son contenu pour réussir l'envoie en 2 étapes,
+Aprés, on a créé une nouvelle classe pour simplifier l'initialisation d'un email et son contenu pour réussir l'envoie en 2 étapes,
 remplir les informations et envoyer !
 
 La deuxième semaine :
@@ -16,3 +16,10 @@ Nous avons créé un model conceptuel et sa base de données pour générer l'hi
 Créer 2 méthodes de l'envoie, une pour un email avec une Template Apache velocity généré automatiquement et l'autre avec une
 Template manuelle.
 Créer une base de données contient les corps de tous les emails à envoyer plus tard, pour automatiser l'envoi
+
+La troisième et la quatrième semaine :
+
+Nous avons créé 3 tables dans la base de données contiennent tous les villes du monde, leurs pays et leurs continents pour bien préciser la localisation
+de l'envoyeur d'email
+En utilisant Spring Batch nous avons réussi à envoyer les emails de temps en temps avec le system automatiquement (chaque
+2 heures par exemple)
