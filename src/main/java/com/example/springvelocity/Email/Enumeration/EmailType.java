@@ -1,4 +1,4 @@
-package com.example.springvelocity.Notification.Enumeration;
+package com.example.springvelocity.Email.Enumeration;
 
 public enum EmailType {
     TOKEN,

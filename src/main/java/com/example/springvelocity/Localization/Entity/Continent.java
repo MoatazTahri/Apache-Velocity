@@ -20,6 +20,6 @@ public class Continent {
 
     private String name;
 
-    @OneToMany(mappedBy = "continent",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "continent", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Country> countries;
 }

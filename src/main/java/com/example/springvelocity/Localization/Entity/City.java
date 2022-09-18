@@ -1,6 +1,7 @@
 package com.example.springvelocity.Localization.Entity;
 
 import com.example.springvelocity.Notification.Entity.Notification;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import java.util.Set;
 @Entity
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "city")
 public class City {
 

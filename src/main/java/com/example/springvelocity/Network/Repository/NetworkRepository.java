@@ -6,5 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface NetworkRepository extends JpaRepository<Network,Integer> {
+
     Network findByPublicIpAndOrganizationIsp(String publicIp,String isp);
 }

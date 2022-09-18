@@ -6,17 +6,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DeviceServiceImpl implements DeviceService{
+public class DeviceServiceImpl implements DeviceService {
+
     @Autowired
     private DeviceRepository repository;
+
     @Override
+    // read only = true
+    // @cachable 
     public Device getDeviceByIpAndMac(String localIp, String macAddress) {
-        return repository.findByLocalIpAndMacAddress(localIp,macAddress);
+        return repository.findByLocalIpAndMacAddress(localIp, macAddress);
     }
 
     @Override
     public Device addIfNotExist(Device device) {
-        if(getDeviceByIpAndMac(device.getLocalIp(),device.getMacAddress())==null)
+        if (this.getDeviceByIpAndMac(device.getLocalIp(), device.getMacAddress()) == null)
             return repository.save(device);
         return null;
     }
