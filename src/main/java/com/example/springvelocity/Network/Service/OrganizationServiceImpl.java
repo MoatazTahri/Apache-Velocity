@@ -6,12 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OrganizationServiceImpl implements OrganizationService{
+public class OrganizationServiceImpl implements OrganizationService {
+
     @Autowired
     private OrganizationRepository repository;
+
     @Override
     public Organization addOrgIfNotExist(Organization organization) {
-        if (getOrgByIsp(organization.getIsp())==null)
+        if (getOrgByIsp(organization.getIsp()) == null)
             return repository.save(organization);
         return null;
     }

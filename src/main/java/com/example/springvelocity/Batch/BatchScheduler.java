@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
@@ -18,17 +19,18 @@ import java.util.concurrent.TimeUnit;
 public class BatchScheduler {
     @Autowired
     private Job job;
+
     @Autowired
     private JobLauncher launcher;
 
     @SneakyThrows
-    @Scheduled(fixedDelay = 10,timeUnit = TimeUnit.SECONDS)
-    public void repeat(){
+    @Scheduled(fixedDelay = 30, timeUnit = TimeUnit.SECONDS)
+    public void repeat() {
         // schedule recupere le fichier de conf
-        Calendar date =Calendar.getInstance();
-        SimpleDateFormat sdf=new SimpleDateFormat("HH:mm:ss");
-        System.out.println("job executed at "+sdf.format(date.getTime()));
-        JobParameters parameters=new JobParametersBuilder().addLong("start",System.currentTimeMillis()).toJobParameters();
-        launcher.run(job,parameters);
+        Calendar date = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        System.out.println("job executed at " + sdf.format(date.getTime()));
+        JobParameters parameters = new JobParametersBuilder().addLong("start", System.currentTimeMillis()).toJobParameters();
+        launcher.run(job, parameters);
     }
 }

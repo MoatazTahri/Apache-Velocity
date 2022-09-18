@@ -6,16 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class NetworkServiceImpl implements NetworkService{
+public class NetworkServiceImpl implements NetworkService {
+
     @Autowired
     private NetworkRepository repository;
+
     @Override
-    public Network getNetworkByPublicIpAndOrgIsp(String publicIp,String isp) {
-        return repository.findByPublicIpAndOrganizationIsp(publicIp,isp);
+    public Network getNetworkByPublicIpAndOrgIsp(String publicIp, String isp) {
+        return repository.findByPublicIpAndOrganizationIsp(publicIp, isp);
     }
+
     @Override
     public Network addIfNotExist(Network network) {
-        if (getNetworkByPublicIpAndOrgIsp(network.getPublicIp(),network.getOrganization().getIsp())!=null)
+        if (getNetworkByPublicIpAndOrgIsp(network.getPublicIp(), network.getOrganization().getIsp()) != null)
             return null;
         return repository.save(network);
     }

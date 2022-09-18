@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class NotificationImpl implements NotificationService{
+public class NotificationServiceImpl implements NotificationService{
 
     @Autowired
     private NotificationRepository notificationRepository;
@@ -18,8 +18,4 @@ public class NotificationImpl implements NotificationService{
         return notificationRepository.save(notification);
     }
 
-    @Override
-    public List<Notification> getNotificationsWhereRecipient(String address) {
-        return notificationRepository.findAllByRecipientAddress(address);
-    }
 }

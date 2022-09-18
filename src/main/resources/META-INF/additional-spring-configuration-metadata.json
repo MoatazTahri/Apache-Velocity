@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "velocity.resources.static-location",
+      "type": "java.lang.String",
+      "description": "Description for velocity.resources.static-location."
+  }
+] }

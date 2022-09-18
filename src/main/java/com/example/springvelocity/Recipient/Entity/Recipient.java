@@ -18,12 +18,16 @@ public class Recipient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String firstName;
+
     private String lastName;
+
     @Column(unique = true)
     private String email;
-    @OneToMany(mappedBy = "recipient",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    private Set<Notification> notifications;
+
+    /*@OneToMany(mappedBy = "recipient",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private Set<Notification> notifications;*/
 
     public Recipient(String firstName, String lastName,String email) {
         this.firstName = firstName;
