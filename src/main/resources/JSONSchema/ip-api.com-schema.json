@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "countryCode": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "regionName": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "number"
+    },
+    "lon": {
+      "type": "number"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "isp": {
+      "type": "string"
+    },
+    "org": {
+      "type": "string"
+    },
+    "as": {
+      "type": "string"
+    },
+    "query": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "country",
+    "countryCode",
+    "region",
+    "regionName",
+    "city",
+    "zip",
+    "lat",
+    "lon",
+    "timezone",
+    "isp",
+    "org",
+    "as",
+    "query"
+  ]
+}
