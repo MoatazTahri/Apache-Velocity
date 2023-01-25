@@ -1,4 +1,4 @@
-package com.example.springvelocity.Notification.Exception;
+package com.leaf.NotificationMS.Exception;
 
 public class RecipientNotFoundException extends Exception {
     public RecipientNotFoundException(String message){
